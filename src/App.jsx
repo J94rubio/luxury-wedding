@@ -1,4 +1,4 @@
-import Hero from "./components/Hero";
+import Hero from "./components/hero";
 import DividerImage from "./components/DividerImage";
 import CountdownSection from "./components/CountdownSection";
 import CalendarSection from "./components/CalendarSection";
