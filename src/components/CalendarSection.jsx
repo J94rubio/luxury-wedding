@@ -37,7 +37,7 @@ export default function CalendarSection() {
           pointer-events-none
         "
         style={{
-          backgroundImage: "url('/src/assets/floral.png')",
+          backgroundImage: "url('../assets/floral.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -56,7 +56,7 @@ export default function CalendarSection() {
           scale-x-[-1]
         "
         style={{
-          backgroundImage: "url('/src/assets/floral.png')",
+          backgroundImage: "url('../assets/floral.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
