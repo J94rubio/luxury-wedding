@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="relative h-[55vh] md:h-screen overflow-hidden">
 
           <img
-            src="/src/assets/imagen_1.jpg"
+            src="../assets/imagen_1.jpg"
             alt="Danna y Brian"
             className="
               w-full
@@ -90,7 +90,7 @@ export default function Hero() {
               "
               style={{
                 backgroundImage:
-                  "url('/src/assets/floral.png')",
+                  "url('../assets/floral.png')",
               }}
             />
           </div>
