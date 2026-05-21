@@ -1,9 +1,9 @@
 export default function Gallery() {
 
   const images = [
-    '/src/assets/gallery/1.jpg',
-    '/src/assets/gallery/2.jpg',
-    '/src/assets/gallery/3.jpg',
+    '../assets/gallery/1.jpg',
+    '../assets/gallery/2.jpg',
+    '../assets/gallery/3.jpg',
   ];
 
   return (
