@@ -196,7 +196,7 @@ export default function CalendarSection() {
               >
 
                 {/* CORAZÓN */}
-                {day === 26 ? (
+                {day === 19 ? (
 
                   <motion.div
                     initial={{ scale: 0 }}
@@ -231,7 +231,7 @@ export default function CalendarSection() {
                         mt-[1px]
                       "
                     >
-                      26
+                      19
                     </span>
 
                   </motion.div>

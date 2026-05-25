@@ -29,7 +29,7 @@ export default function CountdownSection() {
 
           <span
             className="
-              text-[58px]
+              text-[50px]
               md:text-[150px]
               leading-none
               font-extralight
@@ -59,7 +59,7 @@ export default function CountdownSection() {
 
           <span
             className="
-              text-[58px]
+              text-[50px]
               md:text-[150px]
               leading-none
               font-extralight
@@ -89,7 +89,7 @@ export default function CountdownSection() {
 
           <span
             className="
-              text-[58px]
+              text-[50px]
               md:text-[150px]
               leading-none
               font-extralight
@@ -119,7 +119,7 @@ export default function CountdownSection() {
 
           <span
             className="
-              text-[58px]
+              text-[50px]
               md:text-[150px]
               leading-none
               font-extralight
@@ -276,7 +276,7 @@ export default function CountdownSection() {
 
         {/* COUNTDOWN */}
         <Countdown
-          date={new Date("2026-09-26T16:00:00")}
+          date={new Date("2026-09-19T16:00:00")}
           renderer={renderer}
         />
 

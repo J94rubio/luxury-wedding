@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="relative h-[55vh] md:h-screen overflow-hidden">
 
           <img
-            src="../assets/imagen_1.jpg"
+            src="/src/assets/imagen_1.jpg"
             alt="Danna y Brian"
             className="
               w-full
@@ -90,7 +90,7 @@ export default function Hero() {
               "
               style={{
                 backgroundImage:
-                  "url('../assets/floral.png')",
+                  "url('/src/assets/floral.png')",
               }}
             />
           </div>
@@ -208,7 +208,7 @@ export default function Hero() {
               md:text-sm
             "
           >
-            26 • Septiembre • 2026
+          19 • Septiembre • 2026
           </motion.p>
 
           {/* CIUDAD */}
