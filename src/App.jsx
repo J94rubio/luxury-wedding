@@ -6,6 +6,7 @@ import EventSection from "./components/EventSection";
 import Gallery from "./components/Gallery";
 import RSVP from "./components/RSVP";
 import MusicButton from "./components/MusicButton";
+import {separator_1, separator_2, separator_3} from "../../public/imagen_1.jpg";
 
 function App() {
 
@@ -16,15 +17,15 @@ function App() {
 
       <Hero />
 
-      <DividerImage image="/src/assets/separator_1.jpg" />
+      <DividerImage image={separator_1} />
 
       <CountdownSection />
 
-      <DividerImage image="/src/assets/separator_2.jpg" />
+      <DividerImage image={separator_2} />
 
       <CalendarSection />
 
-      <DividerImage image="/src/assets/separator_3.jpg" />
+      <DividerImage image={separator_3} />
 
       <EventSection />
 
