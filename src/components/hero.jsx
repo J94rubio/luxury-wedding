@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import imagen_1 from "../assets/imagen_1.jpg";
 
 export default function Hero() {
   return (
@@ -14,7 +15,7 @@ export default function Hero() {
         <div className="relative h-[55vh] md:h-screen overflow-hidden">
 
           <img
-            src="../assets/imagen_1.jpg"
+            src={imagen_1}
             alt="Danna y Brian"
             className="
               w-full
