@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import imagen_1 from "../assets/imagen_1.jpg";
+import imagen_1 from "../../public/imagen_1.jpg";
 
 export default function Hero() {
   return (
