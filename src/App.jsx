@@ -6,7 +6,9 @@ import EventSection from "./components/EventSection";
 import Gallery from "./components/Gallery";
 import RSVP from "./components/RSVP";
 import MusicButton from "./components/MusicButton";
-import {separator_1, separator_2, separator_3} from "../../public/imagen_1.jpg";
+import separator_1 from "/separator_1.jpg";
+import separator_2 from "/separator_2.jpg";
+import separator_3 from "/separator_3.jpg";
 
 function App() {
 
