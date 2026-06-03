@@ -249,56 +249,6 @@ export default function EventSection() {
 
             </div>
 
-            {/* DRESS CODE */}
-            <div className="flex items-start gap-5">
-
-              <div
-                className="
-                  w-14
-                  h-14
-                  rounded-full
-                  bg-[#F5EEDF]
-                  flex
-                  items-center
-                  justify-center
-                  shrink-0
-                "
-              >
-                <Shirt
-                  className="text-[#C8A96B]"
-                  strokeWidth={1.5}
-                />
-              </div>
-
-              <div>
-
-                <p
-                  className="
-                    uppercase
-                    tracking-[4px]
-                    text-[#C8A96B]
-                    text-[11px]
-                    mb-2
-                  "
-                >
-                  Dress Code
-                </p>
-
-                <h3
-                  className="
-                    text-[#1A1A1A]
-                    text-xl
-                    md:text-2xl
-                    font-light
-                  "
-                >
-                  Formal Elegante
-                </h3>
-
-              </div>
-
-            </div>
-
           </div>
 
           {/* BOTÓN */}

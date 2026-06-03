@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { FaMusic, FaPause, FaPlay } from "react-icons/fa";
+import perfect from "../assets/music/perfect.mp4";
 
 export default function MusicButton() {
   const audioRef = useRef(null);
@@ -37,7 +38,7 @@ export default function MusicButton() {
   return (
     <>
       <audio ref={audioRef} loop>
-        <source src="/src/assets/music/perfect.mp4" type="audio/mp3" />
+        <source src={perfect} type="audio/mp3" />
       </audio>
 
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
