@@ -1,32 +1,8 @@
-// export default function RSVP() {
-//   return (
-//     <section className="py-32 px-6 text-center">
-
-//       <p className="uppercase tracking-[6px] text-gold text-sm mb-6">
-//         Confirma tu asistencia
-//       </p>
-
-//       <h2 className="font-luxury text-5xl text-dark mb-10">
-//         Te Esperamos
-//       </h2>
-
-//       <a
-//         href="https://wa.me/573001112233"
-//         target="_blank"
-//         className="inline-block border border-gold text-gold px-12 py-5 rounded-full uppercase tracking-[4px] hover:bg-gold hover:text-white transition duration-300"
-//       >
-//         Confirmar por WhatsApp
-//       </a>
-
-//     </section>
-//   );
-// }
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function RSVP() {
   const [open, setOpen] = useState(false);
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle");
   const [form, setForm] = useState({
     nombre: "",
     telefono: "",
@@ -34,6 +10,25 @@ export default function RSVP() {
     mensaje: "",
   });
   const [errors, setErrors] = useState(false);
+  const [invitado, setInvitado] = useState(null); // { nombre, cupos }
+
+  // Leer ?invitado= de la URL y buscar en el backend
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("invitado");
+    if (!slug) return;
+
+    fetch(`http://127.0.0.1:5000/api/invitados/buscar?slug=${encodeURIComponent(slug)}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setInvitado(data.invitado);
+          // Prellenar el nombre en el formulario
+          setForm((prev) => ({ ...prev, nombre: data.invitado.nombre }));
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const handleChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -68,7 +63,7 @@ export default function RSVP() {
   const handleClose = () => {
     setOpen(false);
     setStatus("idle");
-    setForm({ nombre: "", telefono: "", asistentes: "", mensaje: "" });
+    setForm((prev) => ({ ...prev, telefono: "", asistentes: "", mensaje: "" }));
     setErrors(false);
   };
 
@@ -79,9 +74,19 @@ export default function RSVP() {
           Confirma tu asistencia
         </p>
 
-        <h2 className="font-luxury text-5xl text-dark mb-10">
+        <h2 className="font-luxury text-5xl text-dark mb-4">
           Te Esperamos
         </h2>
+
+        {/* Saludo personalizado */}
+        {invitado && (
+          <p className="text-dark/60 text-sm tracking-widest mb-10">
+            {" "}
+            <span className="font-script text-gold text-4xl">{invitado.nombre}</span>{" "}
+          </p>
+        )}
+
+        {!invitado && <div className="mb-10" />}
 
         <button
           onClick={() => setOpen(true)}
@@ -127,9 +132,31 @@ export default function RSVP() {
                 <p className="uppercase tracking-[4px] text-gold text-xs mb-1">
                   Confirmación
                 </p>
-                <h3 className="font-luxury text-2xl text-dark mb-6">
+                <h3 className="font-luxury text-2xl text-dark mb-4">
                   ¿Nos acompañas?
                 </h3>
+
+                {/* Alert cupos personalizados */}
+                {invitado && (
+                  <div className="flex gap-3 bg-amber-50 border border-[#d4c9b0] rounded-lg px-4 py-3 mb-4">
+                    <span className="text-gold text-lg leading-none mt-0.5">⚠</span>
+                    <p className="text-[11px] text-[#7a6a4f] leading-relaxed">
+                      Recuerda que solo te hemos reservado{" "}
+                      <span className="font-semibold">{invitado.cupos} {invitado.cupos === 1 ? "cupo" : "cupos"}</span>{" "}
+                      para ti.
+                    </p>
+                  </div>
+                )}
+
+                {/* Alert genérico si no hay invitado personalizado */}
+                {!invitado && (
+                  <div className="flex gap-3 bg-amber-50 border border-[#d4c9b0] rounded-lg px-4 py-3 mb-4">
+                    <span className="text-gold text-lg leading-none mt-0.5">⚠</span>
+                    <p className="text-[11px] text-[#7a6a4f] leading-relaxed">
+                      Por favor verifica la cantidad de cupos reservados para ti indicados en la parte inferior del sobre de la invitación.
+                    </p>
+                  </div>
+                )}
 
                 <div className="space-y-4">
                   <Field label="Nombre completo *">
@@ -160,11 +187,9 @@ export default function RSVP() {
                       className="w-full border border-[#d4c9b0] rounded-md px-4 py-2.5 text-sm bg-[#fefcf7] text-dark focus:outline-none focus:border-gold"
                     >
                       <option value="">Selecciona</option>
-                      <option>1 persona</option>
-                      <option>2 personas</option>
-                      <option>3 personas</option>
-                      <option>4 personas</option>
-                      <option>5 o más</option>
+                      {Array.from({ length: invitado?.cupos || 5 }, (_, i) => (
+                        <option key={i + 1}>{i + 1} {i + 1 === 1 ? "persona" : "personas"}</option>
+                      ))}
                     </select>
                   </Field>
 
@@ -173,7 +198,7 @@ export default function RSVP() {
                       name="mensaje"
                       value={form.mensaje}
                       onChange={handleChange}
-                      placeholder="Restricciones alimentarias, algo que quieras decirnos..."
+                      placeholder="¿Algo que quieras decirnos...?"
                       rows={3}
                       className="w-full border border-[#d4c9b0] rounded-md px-4 py-2.5 text-sm bg-[#fefcf7] text-dark focus:outline-none focus:border-gold resize-none"
                     />

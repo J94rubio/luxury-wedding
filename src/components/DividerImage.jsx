@@ -16,7 +16,7 @@ export default function DividerImage({
 
       {/* IMAGEN */}
       <motion.img
-        initial={{ scale: 1.12 }}
+        initial={{ scale: 1.08 }}
         whileInView={{ scale: 1 }}
         transition={{
           duration: 2,
@@ -147,53 +147,6 @@ export default function DividerImage({
           />
         </svg>
       </div>
-
-      {/* DETALLE CENTRAL */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.3,
-        }}
-        viewport={{ once: true }}
-        className="
-          absolute
-          inset-0
-          flex
-          items-center
-          justify-center
-          z-30
-        "
-      >
-
-        <div
-          className="
-            w-16
-            h-16
-            rounded-full
-            border
-            border-white/50
-            bg-white/10
-            backdrop-blur-md
-            flex
-            items-center
-            justify-center
-          "
-        >
-
-          <div
-            className="
-              text-white
-              text-xl
-            "
-          >
-            ✦
-          </div>
-
-        </div>
-
-      </motion.div>
 
     </section>
   );

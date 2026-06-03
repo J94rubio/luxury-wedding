@@ -5,10 +5,12 @@ import CalendarSection from "./components/CalendarSection";
 import EventSection from "./components/EventSection";
 import Gallery from "./components/Gallery";
 import RSVP from "./components/RSVP";
+import DressCode from "./components/DressCode";
+import LluviaDeSobres from "./components/LluviaDeSobres";
 import MusicButton from "./components/MusicButton";
 import separator_1 from "/separator_1.jpg";
-import separator_2 from "/separator_2.jpg";
-import separator_3 from "/separator_3.jpg";
+import separator_2_2 from "../src/assets/separator/separator_2_2.jpeg";
+import imagen_7_2 from "../src/assets/separator/imagen_7_2.jpeg";
 
 function App() {
 
@@ -23,15 +25,19 @@ function App() {
 
       <CountdownSection />
 
-      <DividerImage image={separator_2} />
+      <DividerImage image={separator_2_2} />
 
       <CalendarSection />
 
-      <DividerImage image={separator_3} />
+      <DividerImage image={imagen_7_2} />
 
       <EventSection />
 
       <Gallery />
+
+      <DressCode />
+      
+      <LluviaDeSobres />
 
       <RSVP />
 
