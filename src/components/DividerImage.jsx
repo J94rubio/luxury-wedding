@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function DividerImage({
   image,
-  height = "h-[260px] md:h-[420px]",
+  height = "h-[360px] md:h-[420px]",
 }) {
   return (
     <section
@@ -16,7 +16,7 @@ export default function DividerImage({
 
       {/* IMAGEN */}
       <motion.img
-        initial={{ scale: 1.08 }}
+        initial={{ scale: 1.04 }}
         whileInView={{ scale: 1 }}
         transition={{
           duration: 2,

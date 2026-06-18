@@ -120,9 +120,9 @@ export default function EventSection() {
               mb-10
             "
           >
-            Castillo
+            Valle Arriba
             <span className="block text-[#C8A96B]">
-              del Mono
+              Centro de Eventos
             </span>
           </h2>
 
@@ -192,7 +192,7 @@ export default function EventSection() {
                     font-light
                   "
                 >
-                  Bogotá, Colombia
+                  La Calera, Colombia
                 </h3>
 
               </div>
@@ -253,7 +253,7 @@ export default function EventSection() {
 
           {/* BOTÓN */}
           <a
-            href="https://maps.google.com"
+            href="https://maps.app.goo.gl/6ybsm6Hw2PmDhvt8A"
             target="_blank"
             rel="noreferrer"
             className="
@@ -318,7 +318,7 @@ export default function EventSection() {
             "
           >
 
-            <iframe
+            {/* <iframe
               title="Mapa Boda"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6545306226294!2d-74.05403832490684!3d4.655550242047084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a686be1fc23%3A0x407222744fa03b97!2sCastillo%20Del%20Mono%20Osorio!5e0!3m2!1ses-419!2sco!4v1778600150958!5m2!1ses-419!2sco"
               referrerPolicy="no-referrer-when-downgrade"
@@ -327,6 +327,16 @@ export default function EventSection() {
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
+            /> */}
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31811.686163624625!2d-74.01562288778133!3d4.689707020484655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8e3f917e44b6ff9d%3A0x3dad705baa38f84c!2sValle%20Arriba%20Centro%20de%20Eventos%2C%20Antes%20del%20alto%20de%20patios%20Entrada%20por%20Hollywood%20y%20Bah%C3%ADa%2C%20Bogot%C3%A1%20-%20La%20Calera%20%235%20Km%204%2C%20Usaqu%C3%A9n%2C%20Bogot%C3%A1%2C%20Cundinamarca!3m2!1d4.6753821!2d-74.0218166!4m5!1s0x8e3f8e39a6d5be41%3A0xe1bec6f8812cb910!2sLa%20Calera%2C%20Cundinamarca!3m2!1d4.7191982999999995!2d-73.9690753!5e0!3m2!1ses-419!2sco!4v1781816484993!5m2!1ses-419!2sco"
+              referrerPolicy="no-referrer-when-downgrade"
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }}
+              allowfullscreen="" 
+              loading="lazy" 
             />
 
             {/* OVERLAY MAPA */}

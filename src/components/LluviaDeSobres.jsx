@@ -58,7 +58,7 @@ export default function LluviaDeSobres() {
           viewport={{ once: true }}
           className="text-dark/60 text-sm leading-loose max-w-lg mx-auto"
         >
-          Si deseas hacernos un regalo, la mejor forma de contribuir a nuestros sueños es a través de una lluvia de sobres. Tu gesto, grande o pequeño, será guardado con mucho amor en nuestro corazón y nos ayudará a construir el hogar que tanto hemos soñado juntos.
+          Lo más importante para nosotros es contar con tu compañía. Si quieres hacernos un obsequio, hemos elegido la modalidad de lluvia de sobres. ¡Gracias por ser parte de este momento tan especial!
         </motion.p>
 
         <motion.p

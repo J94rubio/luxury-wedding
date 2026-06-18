@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import imagen_1 from "../../public/imagen_1.jpg";
+import imagen_10 from '../assets/gallery/imagen_10.jpeg';
 
 export default function Hero() {
   return (
@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="relative h-[55vh] md:h-screen overflow-hidden">
 
           <img
-            src={imagen_1}
+            src={imagen_10}
             alt="Danna y Brian"
             className="
               w-full
@@ -225,6 +225,24 @@ export default function Hero() {
             "
           >
             Bogotá
+
+          </motion.p>
+
+          {/* Mensaje Inicial */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="
+              mt-4
+              text-[#1A1A1A]
+              text-sm
+              tracking-[3px]
+              italic
+            "
+          >
+            <br />
+            Dicen que el tiempo pone cada cosa en su lugar. El nuestro nos encontró, nos permitió crecer juntos y nos regaló incontables aventuras. Hoy, con el corazón lleno de amor, damos un paso más en este viaje y queremos compartirlo con ustedes.
           </motion.p>
 
           {/* SCROLL ICON */}

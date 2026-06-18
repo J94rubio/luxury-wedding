@@ -228,6 +228,24 @@ export default function CountdownSection() {
       {/* CONTENIDO */}
       <div className="max-w-7xl mx-auto text-center relative z-10">
 
+        {/* Versiculo */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="
+              mt-4
+              text-[#1A1A1A]
+              text-sm
+              tracking-[3px]
+              italic
+            "
+          >
+            "Por eso dejará el hombre a su padre y a su madre, se unirá a su esposa, y los dos serán una sola carne."
+            <br />Génesis 2:24 
+            
+          </motion.p>
+
         {/* SUBTITULO */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -243,6 +261,9 @@ export default function CountdownSection() {
             mb-8
           "
         >
+          <br />
+          <br />
+          <br />
           Faltan
         </motion.p>
 

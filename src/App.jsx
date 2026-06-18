@@ -8,9 +8,9 @@ import RSVP from "./components/RSVP";
 import DressCode from "./components/DressCode";
 import LluviaDeSobres from "./components/LluviaDeSobres";
 import MusicButton from "./components/MusicButton";
-import separator_1 from "/separator_1.jpg";
+import imagen_11 from '../src/assets/gallery/imagen_11.jpeg';
 import separator_2_2 from "../src/assets/separator/separator_2_2.jpeg";
-import imagen_7_2 from "../src/assets/separator/imagen_7_2.jpeg";
+import imagen_13 from '../src/assets/gallery/imagen_13.jpeg';
 
 function App() {
 
@@ -21,15 +21,15 @@ function App() {
 
       <Hero />
 
-      <DividerImage image={separator_1} />
+      <DividerImage image={separator_2_2} />
 
       <CountdownSection />
 
-      <DividerImage image={separator_2_2} />
+      <DividerImage image={imagen_11} />
 
       <CalendarSection />
 
-      <DividerImage image={imagen_7_2} />
+      <DividerImage image={imagen_13} />
 
       <EventSection />
 
