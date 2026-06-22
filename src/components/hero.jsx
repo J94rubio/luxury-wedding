@@ -132,7 +132,7 @@ export default function Hero() {
                 tracking-[2px]
               "
             >
-              Danna
+              Brian
             </h1>
 
             <div
@@ -158,7 +158,7 @@ export default function Hero() {
                 tracking-[2px]
               "
             >
-              Brian
+              Danna
             </h1>
 
           </motion.div>

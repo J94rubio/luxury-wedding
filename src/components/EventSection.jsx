@@ -1,10 +1,7 @@
-// src/components/EventSection.jsx
-
 import {
   MapPin,
   Clock3,
   Sparkles,
-  Shirt,
 } from "lucide-react";
 
 import { motion } from "framer-motion";
@@ -15,9 +12,11 @@ export default function EventSection() {
     <section
       className="
         relative
-        py-44
-        md:py-56
-        px-6
+        py-24
+        md:py-44
+        lg:py-56
+        px-4
+        sm:px-6
         overflow-hidden
         bg-[#F8F6F2]
       "
@@ -35,8 +34,7 @@ export default function EventSection() {
           pointer-events-none
         "
         style={{
-          backgroundImage:
-            "url('/src/assets/floral.png')",
+          backgroundImage: "url('/src/assets/floral.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -55,8 +53,7 @@ export default function EventSection() {
           scale-x-[-1]
         "
         style={{
-          backgroundImage:
-            "url('/src/assets/floral.png')",
+          backgroundImage: "url('/src/assets/floral.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",
         }}
@@ -69,8 +66,9 @@ export default function EventSection() {
           mx-auto
           grid
           md:grid-cols-2
-          gap-14
-          items-center
+          gap-8
+          md:gap-14
+          items-start
           relative
           z-10
         "
@@ -88,9 +86,12 @@ export default function EventSection() {
             backdrop-blur-xl
             border
             border-[#E7D8BC]
-            rounded-[40px]
-            p-10
-            md:p-16
+            rounded-[28px]
+            md:rounded-[40px]
+            p-7
+            sm:p-10
+            md:p-12
+            lg:p-16
           "
         >
 
@@ -98,11 +99,14 @@ export default function EventSection() {
           <p
             className="
               uppercase
-              tracking-[8px]
+              tracking-[6px]
+              md:tracking-[8px]
               text-[#C8A96B]
-              text-[11px]
-              md:text-sm
-              mb-8
+              text-[10px]
+              md:text-[11px]
+              lg:text-sm
+              mb-6
+              md:mb-8
             "
           >
             Ceremonia & Recepción
@@ -113,11 +117,14 @@ export default function EventSection() {
             className="
               font-luxury
               text-[#1A1A1A]
-              text-5xl
-              md:text-7xl
+              text-4xl
+              sm:text-5xl
+              md:text-5xl
+              lg:text-7xl
               font-light
               leading-[1]
-              mb-10
+              mb-8
+              md:mb-10
             "
           >
             Valle Arriba
@@ -132,30 +139,26 @@ export default function EventSection() {
               flex
               items-center
               gap-4
-              mb-12
+              mb-8
+              md:mb-12
             "
           >
-
             <div className="w-12 h-[1px] bg-[#D8C2A0]" />
-
-            <span className="text-[#C8A96B] text-sm">
-              ✦
-            </span>
-
+            <span className="text-[#C8A96B] text-sm">✦</span>
             <div className="w-12 h-[1px] bg-[#D8C2A0]" />
-
           </div>
 
           {/* INFO */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
 
             {/* UBICACIÓN */}
-            <div className="flex items-start gap-5">
-
+            <div className="flex items-start gap-4 md:gap-5">
               <div
                 className="
-                  w-14
-                  h-14
+                  w-11
+                  h-11
+                  md:w-14
+                  md:h-14
                   rounded-full
                   bg-[#F5EEDF]
                   flex
@@ -164,48 +167,46 @@ export default function EventSection() {
                   shrink-0
                 "
               >
-                <MapPin
-                  className="text-[#C8A96B]"
-                  strokeWidth={1.5}
-                />
+                <MapPin className="text-[#C8A96B] w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
 
               <div>
-
                 <p
                   className="
                     uppercase
                     tracking-[4px]
                     text-[#C8A96B]
-                    text-[11px]
-                    mb-2
+                    text-[10px]
+                    mb-1.5
+                    md:mb-2
                   "
                 >
                   Ubicación
                 </p>
-
                 <h3
                   className="
                     text-[#1A1A1A]
-                    text-xl
-                    md:text-2xl
+                    text-base
+                    sm:text-lg
+                    md:text-xl
+                    lg:text-2xl
                     font-light
+                    leading-snug
                   "
                 >
-                  La Calera, Colombia
+                  Km 4.5 vía al alto de patios vía la Calera. A 10 minutos de la Cra 7 con Calle 85., Colombia
                 </h3>
-
               </div>
-
             </div>
 
             {/* HORA */}
-            <div className="flex items-start gap-5">
-
+            <div className="flex items-start gap-4 md:gap-5">
               <div
                 className="
-                  w-14
-                  h-14
+                  w-11
+                  h-11
+                  md:w-14
+                  md:h-14
                   rounded-full
                   bg-[#F5EEDF]
                   flex
@@ -214,73 +215,70 @@ export default function EventSection() {
                   shrink-0
                 "
               >
-                <Clock3
-                  className="text-[#C8A96B]"
-                  strokeWidth={1.5}
-                />
+                <Clock3 className="text-[#C8A96B] w-4 h-4 md:w-5 md:h-5" strokeWidth={1.5} />
               </div>
 
               <div>
-
                 <p
                   className="
                     uppercase
                     tracking-[4px]
                     text-[#C8A96B]
-                    text-[11px]
-                    mb-2
+                    text-[10px]
+                    mb-1.5
+                    md:mb-2
                   "
                 >
                   Hora
                 </p>
-
                 <h3
                   className="
                     text-[#1A1A1A]
-                    text-xl
-                    md:text-2xl
+                    text-base
+                    sm:text-lg
+                    md:text-xl
+                    lg:text-2xl
                     font-light
                   "
                 >
                   4:00 PM
                 </h3>
-
               </div>
-
             </div>
 
           </div>
 
           {/* BOTÓN */}
           <a
-            href="https://maps.app.goo.gl/6ybsm6Hw2PmDhvt8A"
+            href="https://maps.app.goo.gl/cAWUAQYSgcdtfbQp7"
             target="_blank"
             rel="noreferrer"
             className="
               inline-flex
               items-center
               gap-3
-              mt-14
-              px-10
-              py-5
+              mt-10
+              md:mt-14
+              px-8
+              md:px-10
+              py-4
+              md:py-5
               rounded-full
               border
               border-[#C8A96B]
               text-[#C8A96B]
               uppercase
               tracking-[4px]
-              text-[11px]
+              text-[10px]
+              md:text-[11px]
               transition-all
               duration-500
               hover:bg-[#C8A96B]
               hover:text-white
             "
           >
-
-            <Sparkles size={16} />
-
+            <Sparkles size={14} />
             Ver Ubicación
-
           </a>
 
         </motion.div>
@@ -298,8 +296,10 @@ export default function EventSection() {
           <div
             className="
               absolute
-              -inset-4
-              rounded-[45px]
+              -inset-3
+              md:-inset-4
+              rounded-[33px]
+              md:rounded-[45px]
               border
               border-[#E8DCC5]
             "
@@ -310,33 +310,26 @@ export default function EventSection() {
             className="
               relative
               overflow-hidden
-              rounded-[40px]
+              rounded-[28px]
+              md:rounded-[40px]
               border
               border-[#E8DCC5]
-              h-[500px]
+              h-[320px]
+              sm:h-[400px]
+              md:h-[500px]
+              lg:h-[580px]
               shadow-[0_20px_80px_rgba(0,0,0,0.06)]
             "
           >
 
-            {/* <iframe
-              title="Mapa Boda"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.6545306226294!2d-74.05403832490684!3d4.655550242047084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9a686be1fc23%3A0x407222744fa03b97!2sCastillo%20Del%20Mono%20Osorio!5e0!3m2!1ses-419!2sco!4v1778600150958!5m2!1ses-419!2sco"
-              referrerPolicy="no-referrer-when-downgrade"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.542022342906!2d-74.02441602490678!3d4.675413941876018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f917e44b6ff9d%3A0x3dad705baa38f84c!2sValle%20Arriba%20Centro%20de%20Eventos!5e0!3m2!1ses-419!2sco!4v1782159445270!5m2!1ses-419!2sco"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-            /> */}
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d31811.686163624625!2d-74.01562288778133!3d4.689707020484655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x8e3f917e44b6ff9d%3A0x3dad705baa38f84c!2sValle%20Arriba%20Centro%20de%20Eventos%2C%20Antes%20del%20alto%20de%20patios%20Entrada%20por%20Hollywood%20y%20Bah%C3%ADa%2C%20Bogot%C3%A1%20-%20La%20Calera%20%235%20Km%204%2C%20Usaqu%C3%A9n%2C%20Bogot%C3%A1%2C%20Cundinamarca!3m2!1d4.6753821!2d-74.0218166!4m5!1s0x8e3f8e39a6d5be41%3A0xe1bec6f8812cb910!2sLa%20Calera%2C%20Cundinamarca!3m2!1d4.7191982999999995!2d-73.9690753!5e0!3m2!1ses-419!2sco!4v1781816484993!5m2!1ses-419!2sco"
               referrerPolicy="no-referrer-when-downgrade"
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }}
-              allowfullscreen="" 
-              loading="lazy" 
             />
 
             {/* OVERLAY MAPA */}
@@ -358,26 +351,10 @@ export default function EventSection() {
       </div>
 
       {/* WAVE SUPERIOR */}
-      <div
-        className="
-          absolute
-          top-0
-          left-0
-          w-full
-          overflow-hidden
-          leading-none
-        "
-      >
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 120"
-          className="
-            relative
-            block
-            w-full
-            h-[90px]
-            md:h-[120px]
-            rotate-180
-          "
+          className="relative block w-full h-[60px] sm:h-[90px] md:h-[120px] rotate-180"
           preserveAspectRatio="none"
         >
           <path
@@ -388,25 +365,10 @@ export default function EventSection() {
       </div>
 
       {/* WAVE INFERIOR */}
-      <div
-        className="
-          absolute
-          bottom-0
-          left-0
-          w-full
-          overflow-hidden
-          leading-none
-        "
-      >
+      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
         <svg
           viewBox="0 0 1440 120"
-          className="
-            relative
-            block
-            w-full
-            h-[90px]
-            md:h-[120px]
-          "
+          className="relative block w-full h-[60px] sm:h-[90px] md:h-[120px]"
           preserveAspectRatio="none"
         >
           <path

@@ -10,7 +10,7 @@ import LluviaDeSobres from "./components/LluviaDeSobres";
 import MusicButton from "./components/MusicButton";
 import imagen_11 from '../src/assets/gallery/imagen_11.jpeg';
 import separator_2_2 from "../src/assets/separator/separator_2_2.jpeg";
-import imagen_13 from '../src/assets/gallery/imagen_13.jpeg';
+import imagen_14 from '../src/assets/gallery/imagen_14.jpeg';
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
 
       <CalendarSection />
 
-      <DividerImage image={imagen_13} />
+      <DividerImage image={imagen_14} />
 
       <EventSection />
 

@@ -3,10 +3,8 @@ import women2 from "../assets/icons/women2.png";
 import men from "../assets/icons/men.png";
 
 const colores = [
-  { nombre: "Blanco Marfil", hex: "#FFFFF0" },
-  { nombre: "Champagne", hex: "#F7E7CE" },
-  { nombre: "Verde Salvia", hex: "#B2AC88" },
-  { nombre: "Terracota", hex: "#E07050" },
+  { nombre: "Blanco", hex: "#FFFFFF" },
+  { nombre: "Verde Oliva", hex: "#607119" }
 ];
 
 export default function DressCode() {
@@ -21,7 +19,7 @@ export default function DressCode() {
           viewport={{ once: true }}
           className="uppercase tracking-[6px] text-gold text-sm mb-6"
         >
-          Dress Code
+          Código de vestimenta
         </motion.p>
 
         <motion.h2

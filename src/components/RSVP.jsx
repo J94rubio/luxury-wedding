@@ -70,13 +70,18 @@ export default function RSVP() {
   return (
     <>
       <section className="py-32 px-6 text-center">
-        <p className="uppercase tracking-[6px] text-gold text-sm mb-6">
+        <p className="uppercase tracking-[6px] text-gold text-sm mb-6 font-bold">
           Confirma tu asistencia
         </p>
 
         <h2 className="font-luxury text-5xl text-dark mb-4">
           Te Esperamos
         </h2>
+
+        <p className="uppercase tracking-[6px] text-gold text-sm mb-6 ">
+          Por favor, confirma tú asistencia a más tardar el 20 de agosto. <br />
+          Será un honor contar con su presencia.
+        </p>
 
         {/* Saludo personalizado */}
         {invitado && (
