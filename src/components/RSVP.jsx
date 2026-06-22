@@ -18,7 +18,7 @@ export default function RSVP() {
     const slug = params.get("invitado");
     if (!slug) return;
 
-    fetch(`http://127.0.0.1:5000/api/invitados/buscar?slug=${encodeURIComponent(slug)}`)
+    fetch(`https://wedding-rsvp-backend-2drr.onrender.com/api/invitados/buscar?slug=${encodeURIComponent(slug)}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.success) {
@@ -42,7 +42,7 @@ export default function RSVP() {
     setStatus("loading");
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/confirmaciones/", {
+      const res = await fetch("https://wedding-rsvp-backend-2drr.onrender.com/api/confirmaciones/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
