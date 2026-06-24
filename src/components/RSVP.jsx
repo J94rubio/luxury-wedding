@@ -146,7 +146,7 @@ export default function RSVP() {
                   <div className="flex gap-3 bg-amber-50 border border-[#d4c9b0] rounded-lg px-4 py-3 mb-4">
                     <span className="text-gold text-lg leading-none mt-0.5">⚠</span>
                     <p className="text-[11px] text-[#7a6a4f] leading-relaxed">
-                      Recuerda que solo te hemos reservado{" "}
+                      Recuerda tenemos reservado{" "}
                       <span className="font-semibold">{invitado.cupos} {invitado.cupos === 1 ? "cupo" : "cupos"}</span>{" "}
                       para ti.
                     </p>
