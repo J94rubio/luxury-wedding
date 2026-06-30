@@ -3,8 +3,8 @@ import women2 from "../assets/icons/women2.png";
 import men from "../assets/icons/men.png";
 
 const colores = [
-  { nombre: "Blanco", hex: "#FFFFFF" },
-  { nombre: "Verde Oliva", hex: "#607119" }
+  { nombre: "Blancos", hex: "#FFFFFF" },
+  { nombre: "Verdes", hex: "#006400" }
 ];
 
 export default function DressCode() {
@@ -108,7 +108,7 @@ export default function DressCode() {
           className="flex justify-center gap-6 flex-wrap"
         >
           {colores.map((color, i) => (
-            <div key={i} className="flex flex-col items-center gap-3">
+            <div key={i} className="flex flex-col items-center">
               <div
                 className="w-16 h-16 rounded-full border border-dark/10 shadow-sm"
                 style={{ backgroundColor: color.hex }}
@@ -119,6 +119,31 @@ export default function DressCode() {
             </div>
           ))}
         </motion.div>
+
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-3"
+        >
+          <div className="flex items-center">
+            {colores.map((color, i) => (
+              <div
+                key={i}
+                className="w-16 h-16 rounded-full border-2 border-white shadow-sm"
+                style={{
+                  backgroundColor: color.hex,
+                  marginLeft: i === 0 ? 0 : "-2rem",
+                  zIndex: i,
+                }}
+              />
+            ))}
+          </div>
+          <span className="text-[11px] uppercase tracking-[2px] text-dark/50">
+            Blanco y Verde
+          </span>
+        </motion.div> */}
 
         <motion.p
           initial={{ opacity: 0 }}
